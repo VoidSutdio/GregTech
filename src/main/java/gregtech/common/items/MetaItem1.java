@@ -1197,5 +1197,18 @@ public class MetaItem1 extends StandardMetaItem {
                 .setRecyclingData(new RecyclingData(new MaterialStack(Materials.Steel, M * 4)));
         SHAPE_MOLDS[22] = SHAPE_MOLD_PIPE_HUGE = addItem(1010, "shape.mold.pipe.huge")
                 .setRecyclingData(new RecyclingData(new MaterialStack(Materials.Steel, M * 4)));
+
+        // ULV Components
+        ELECTRIC_MOTOR_ULV = addItem(1011, "electric.motor.ulv");
+        ELECTRIC_PISTON_ULV = addItem(1012, "electric.piston.ulv");
+        ROBOT_ARM_ULV = addItem(1013, "robot.arm.ulv").addComponents(new TooltipBehavior(lines -> {
+            lines.add(I18n.format("metaitem.robot.arm.tooltip"));
+            lines.add(I18n.format("gregtech.universal.tooltip.item_transfer_rate_stacks", 2));
+        }));
+        CONVEYOR_MODULE_ULV = addItem(1014, "conveyor.module.ulv");
+        ELECTRIC_PUMP_ULV = addItem(1015, "electric.pump.ulv").addComponents(new TooltipBehavior(lines -> {
+            lines.add(I18n.format("metaitem.electric.pump.tooltip"));
+            lines.add(I18n.format("gregtech.universal.tooltip.fluid_transfer_rate", 320 / 20));
+        }));
     }
 }

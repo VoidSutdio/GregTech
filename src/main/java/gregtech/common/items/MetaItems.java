@@ -160,6 +160,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ZERO_POINT_MODULE;
     public static MetaItem<?>.MetaValueItem ULTIMATE_BATTERY;
 
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_ULV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_MV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_HV;
@@ -174,6 +175,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UXV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_OpV;
 
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_ULV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_MV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_HV;
@@ -201,6 +203,7 @@ public final class MetaItems {
 
     public static MetaItem<?>.MetaValueItem DYNAMITE;
 
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_ULV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_LV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_MV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_HV;
@@ -215,6 +218,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UXV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_OpV;
 
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_ULV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_MV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_HV;
@@ -229,6 +233,7 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UXV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_OpV;
 
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_ULV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_LV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_MV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_HV;
