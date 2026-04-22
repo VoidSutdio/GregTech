@@ -211,7 +211,8 @@ public final class MetaTileEntities {
     public static MetaTileEntityQuantumProxy QUANTUM_STORAGE_PROXY;
     public static MetaTileEntityQuantumExtender QUANTUM_STORAGE_EXTENDER;
     public static final MetaTileEntityQuantumChest[] QUANTUM_CHEST = new MetaTileEntityQuantumChest[10];
-    public static final MetaTileEntityQuantumTank[] QUANTUM_TANK = new MetaTileEntityQuantumTank[10];
+    public static final MetaTileEntityQuantumTank[] QUANTUM_TANK = new MetaTileEntityQuantumTank[11];
+    public static final MetaTileEntityQuantumTank[] PORTABLE_TANK = new MetaTileEntityQuantumTank[11];
     public static final MetaTileEntityBuffer[] BUFFER = new MetaTileEntityBuffer[3];
     public static final MetaTileEntityPump[] PUMP = new MetaTileEntityPump[8];
     public static final MetaTileEntityBlockBreaker[] BLOCK_BREAKER = new MetaTileEntityBlockBreaker[4];
@@ -434,11 +435,11 @@ public final class MetaTileEntities {
         if (mte instanceof IMultiblockAbilityPart<?>abilityPart) {
             for (var ability : abilityPart.getAbilities())
                 MultiblockAbility.registerMultiblockAbility(ability, mte);
-        }
 
-        if (Mods.JustEnoughItems.isModLoaded() && mte instanceof MultiblockControllerBase controller &&
-                controller.shouldShowInJei()) {
-            MultiblockInfoCategory.registerMultiblock(controller);
+            if (Mods.JustEnoughItems.isModLoaded() && mte instanceof MultiblockControllerBase controller &&
+                    controller.shouldShowInJei()) {
+                MultiblockInfoCategory.registerMultiblock(controller);
+            }
         }
 
         mte.getRegistry().register(id, mte.metaTileEntityId, mte);
