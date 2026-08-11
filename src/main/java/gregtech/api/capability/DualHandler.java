@@ -19,8 +19,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class DualHandler implements IItemHandlerModifiable, IMultipleTankHandler, INotifiableHandler,
-                         IMultipleNotifiableHandler {
+public class DualHandler implements IItemHandlerModifiable, IMultipleTankHandler, INotifiableHandler, IMultipleNotifiableHandler {
 
     @NotNull
     private static final ItemStackHashStrategy strategy = ItemStackHashStrategy.comparingAll();
