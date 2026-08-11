@@ -56,7 +56,6 @@ import com.cleanroommc.modularui.widgets.ToggleButton;
 import com.cleanroommc.modularui.widgets.layout.Flow;
 import com.cleanroommc.modularui.widgets.layout.Grid;
 import com.cleanroommc.modularui.widgets.slot.ItemSlot;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -192,7 +191,8 @@ public class MetaTileEntityDualHatch extends MetaTileEntityMultiblockNotifiableP
     @Override
     public @NotNull List<MultiblockAbility<?>> getAbilities() {
         // for import only items as it will thinks as twice more inputs otherwise
-        return isExportHatch ? Arrays.asList(MultiblockAbility.EXPORT_ITEMS, MultiblockAbility.EXPORT_FLUIDS) : Arrays.asList(MultiblockAbility.IMPORT_ITEMS); 
+        return isExportHatch ? Arrays.asList(MultiblockAbility.EXPORT_ITEMS, MultiblockAbility.EXPORT_FLUIDS) :
+                Arrays.asList(MultiblockAbility.IMPORT_ITEMS);
     }
 
     @Override
@@ -280,7 +280,9 @@ public class MetaTileEntityDualHatch extends MetaTileEntityMultiblockNotifiableP
                                         .addLine(collapseStateValue.getBoolValue() ?
                                                 IKey.lang("gregtech.gui.item_auto_collapse.tooltip.enabled") :
                                                 IKey.lang("gregtech.gui.item_auto_collapse.tooltip.disabled"))))
-                        .childIf(hasGhostCircuit, new GhostCircuitSlotWidget().slot(circuitInventory, 0).background(GTGuiTextures.SLOT, GTGuiTextures.INT_CIRCUIT_OVERLAY))
+                        .childIf(hasGhostCircuit,
+                                new GhostCircuitSlotWidget().slot(circuitInventory, 0).background(GTGuiTextures.SLOT,
+                                        GTGuiTextures.INT_CIRCUIT_OVERLAY))
                         .childIf(!hasGhostCircuit, new Widget<>()
                                 .background(GTGuiTextures.SLOT, GTGuiTextures.BUTTON_X)
                                 .tooltip(t -> t.addLine(

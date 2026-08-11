@@ -19,7 +19,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class DualHandler implements IItemHandlerModifiable, IMultipleTankHandler, INotifiableHandler, IMultipleNotifiableHandler {
+public class DualHandler implements IItemHandlerModifiable, IMultipleTankHandler, INotifiableHandler,
+                         IMultipleNotifiableHandler {
 
     @NotNull
     private static final ItemStackHashStrategy strategy = ItemStackHashStrategy.comparingAll();
@@ -217,6 +218,8 @@ public class DualHandler implements IItemHandlerModifiable, IMultipleTankHandler
 
         for (var tank : fluidDelegate) {
             if (tank instanceof INotifiableHandler notifiableHandler) {
+                handlerList.add(notifiableHandler);
+            } else if (tank.getDelegate() instanceof INotifiableHandler notifiableHandler) {
                 handlerList.add(notifiableHandler);
             }
         }

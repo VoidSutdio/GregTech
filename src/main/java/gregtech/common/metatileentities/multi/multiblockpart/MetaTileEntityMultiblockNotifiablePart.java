@@ -67,6 +67,8 @@ public abstract class MetaTileEntityMultiblockNotifiablePart extends MetaTileEnt
                         for (var tank : multipleTankHandler.getFluidTanks()) {
                             if (tank instanceof INotifiableHandler notifiableTank) {
                                 notifiableHandlers.add(notifiableTank);
+                            } else if (tank.getDelegate() instanceof INotifiableHandler notifiableTank) {
+                                notifiableHandlers.add(notifiableTank);
                             }
                         }
                     } else if (handler instanceof INotifiableHandler notifiableHandler) {

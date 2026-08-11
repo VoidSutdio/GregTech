@@ -1103,15 +1103,17 @@ final class MetaTileEntityRegistration {
         // Dual Input Hatches
         for (int tier = GTValues.ULV; tier <= (GregTechAPI.isHighTier() ? GTValues.OpV : GTValues.UHV); tier++) {
             String voltageName = GTValues.VN[tier].toLowerCase();
-            MetaTileEntities.DUAL_INPUT_HATCH[tier] = MetaTileEntities.registerMetaTileEntity(11591 + tier, new MetaTileEntityDualHatch(
-                    gregtechId(String.format("%s.%s", "dual_input_hatch", voltageName)), tier, false));
+            MetaTileEntities.DUAL_INPUT_HATCH[tier] = MetaTileEntities.registerMetaTileEntity(11591 + tier,
+                    new MetaTileEntityDualHatch(
+                            gregtechId(String.format("%s.%s", "dual_input_hatch", voltageName)), tier, false));
         }
 
         // Dual Output Hatches
         for (int tier = GTValues.ULV; tier <= (GregTechAPI.isHighTier() ? GTValues.OpV : GTValues.UHV); tier++) {
             String voltageName = GTValues.VN[tier].toLowerCase();
-            MetaTileEntities.DUAL_INPUT_HATCH[tier] = MetaTileEntities.registerMetaTileEntity(11605 + tier, new MetaTileEntityDualHatch(
-                    gregtechId(String.format("%s.%s", "dual_output_hatch", voltageName)), tier, true));
+            MetaTileEntities.DUAL_INPUT_HATCH[tier] = MetaTileEntities.registerMetaTileEntity(11605 + tier,
+                    new MetaTileEntityDualHatch(
+                            gregtechId(String.format("%s.%s", "dual_output_hatch", voltageName)), tier, true));
         }
     }
 }
